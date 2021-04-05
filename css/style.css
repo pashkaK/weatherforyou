@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    min-height: 95vh;
+    width: 100%;
+    background: url(../images/default.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: azure;
+    display: flex;
+    flex-direction: column;
+}
+#container {
+    margin-top: 140px;
+    height: 270px;
+    width: 520px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 5px black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 35%;
+}
+
+#container ul li {
+    margin: 10px;
+}
+
+
+#city__name {
+    padding-top: 10px;
+    font-size: 42px;
+    font-weight: 700;
+    color: azure;
+}
+
+#iconImg {
+    height: 40px;
+    width: 40px;
+}
+
+.search {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#description {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+}
+#wrapper__icon {
+    height: 40px;
+    width: 40px; 
+    margin-bottom: -6px;
+    display: inline;
+    vertical-align: -8px;
+}
+
+#container div {
+    display:inline-block;
+}
+
+#search__value {
+    width: 520px;
+    font-weight: bold;
+    font-size: 28px;
+    border: none;
+    padding: 15px;
+    vertical-align: middle;
+    background: rgba(231,231,231, .8);
+    outline: none;
+}
+
+#search__btn {
+    border: none;
+    font-size: 24px;
+    color: #3366CC;
+    cursor: pointer;
+    outline: none;
+    background: rgba(231,231,231, .8);
+    
+}
+
+#search__btn::after {
+    content: "\e986";
+    font-family: 'icomoon';
+    padding: 10px;
+}
+
+.footer {
+    width: 100%;
+    height: 5vh;
+    background: rgba(0,0,0, 0.9);
+    text-align: center;
+} 
+
+.footer span {
+    color: #e7e7e7;
+    display: inline-block;
+    padding-top: 9px;
+
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        width: 400px;
+    }
+
+    #container ul {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #search__value {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #container {
+        width: 340px;
+    }
+
+    #search__value {
+        width: 340px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #container {
+        width: 300px;
+    }
+
+    #search__value {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #city__name {
+        font-size: 38px;
+    }
+
+    #description {
+        font-size: 30px;
+    }
+
+    #container {
+        width: 265px;
+    }
+
+    #search__value {
+        width: 265px;
+    }
+}

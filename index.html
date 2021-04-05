@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+    <main>
+        <div class="search">
+            <input type="text" id="search__value" onkeypress="handleKeyPress(event)"> 
+            <button id="search__btn" type="submit"></button>
+        </div>
+        <div id="container">
+            <h1 id="city__name"></h1>
+            <div id="description">
+                <p></p>
+            </div>
+            <div id="wrapper__icon"><img id="iconImg"></div>
+            <hr>
+            <ul>
+                <li id="humidity">Humidity - <span>0</span> %</li>
+                <li id="temperature">Temperature - <span>0</span> ℃</li>
+                <li id="wind_speed">Wind Speed - <span>0</span> m/s</li>
+                <li id="pressure">Pressure - <span>0</span> mm Hg</li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>© Created by Pavlo Kozulia. 2021</span>    
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

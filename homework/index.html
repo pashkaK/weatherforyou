@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function confirmEnding(str, target) {
+            var endStr = str.substr(-target.length);
+            if (endStr === target) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    confirmEnding("Bastian", "n");
+    function confirmEndingNew(str, target) {
+        return str.substr(-target.length) === target;
+    }
+    confirmEndingNew('Bastian', 'n');
+    
+    function repeatStringNumTimes(str, num) {
+        var strNew = ""
+        if (num < 1) {
+            return "";
+        } else {
+            for(var i = 0; i < num; i++) {
+                strNew += str;
+            }
+            return strNew
+        }   
+        console.log(strNew);
+    }
+
+    repeatStringNumTimes("abc", 3);
+    
+    function repeatStringNumTimesNew(str, num) {
+        if (num < 1) {
+            return "";
+        } else {
+           return str + repeatStringNumTimesNew(str, num - 1);
+        }
+    }
+    repeatStringNumTimesNew("*", 3)
+
+    function repeatStringNumTimesWithRepeatMethod(str, num) {
+        if (num < 1) {
+            return "";
+        } else {
+           return str.repeat(num);
+        }
+    }
+    repeatStringNumTimesWithRepeatMethod("abc", 3)
+
+    function truncateString(str, num) {
+        var strSplited = str.split(''), i, newStr = "";
+        if(num >= str.length) {
+            return str;
+        } else {
+            for(i = 0; i < num; i += 1) { 
+                newStr += strSplited[i];
+            }
+            if(num < strSplited.length) {
+                return newStr + "...";
+            } else {
+                return newStr;
+            }
+        }
+    }
+    truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2)
+
+    // function findElement(arr, func) {
+    //     var num = 0, i;
+
+    //     for (i = 0; i < arr.length; i += 1) {
+    //         num = arr[i];
+    //         if (func(num)) {
+    //             return num;
+    //         }
+    //     }
+
+    //     return undefined;
+    // }
+    // findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+    function findElement(arr, func) {
+        return arr.find(func);
+    }
+    findElement([1, 2, 3, 4], num => num % 2 === 0);
+    </script>
+</body>
+</html>
